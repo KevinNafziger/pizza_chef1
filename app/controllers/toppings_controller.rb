@@ -1,4 +1,5 @@
 class ToppingsController < ApplicationController
+  layout "toppings", except:  %i[ show edit update destroy ]
   before_action :set_topping, only: %i[ show edit update destroy ]
 
   # GET /toppings or /toppings.json

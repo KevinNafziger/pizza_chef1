@@ -1,7 +1,6 @@
-<div id="<%= dom_id topping %>">
+<div id="<%= dom_id topping %>" style="border:1px solid" class="card Gmodule md:w-2/3 card--1">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= topping.name %>
+    <strong class="block font-medium mb-1 brandh1"><%= topping.name %></strong>
   </p>
 
   <% if action_name != "show" %>

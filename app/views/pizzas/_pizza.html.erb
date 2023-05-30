@@ -1,7 +1,7 @@
-<div id="<%= dom_id pizza %>" class="card Gmodule md:w-2/3 card--1" style="border:1px solid" >
-  <div class="card__info">
-      <h2 class="heading-26 brandh1"><%= pizza.name %></h2>
-  </div>
+<div class="card Gmodule md:w-2/3 card--1" style="border:1px solid" >
+
+    <h3 class="brandh1"><%= pizza.name %></h3>
+
    <div class="card__by">
     <% if action_name != "show" %>
       <%= link_to 'Edit', edit_pizza_path(pizza), data: { turbo_frame: "modal" }, class: "rounded py-3 ml-2 px-5 bg-gray-50 inline-block" %>

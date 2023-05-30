@@ -25,9 +25,8 @@ class PizzasController < ApplicationController
 
     respond_to do |format|
       if @pizza.save
-        format.turbo_stream do
-          render turbo_stream: turbo_stream.prepend('pizzas', partial: "pizzas/pizza", locals: {pizza: @pizza} )
-        end
+        format.html { redirect_to pizza_url(@pizza), notice: "Pizza was successfully created." }
+        format.json { render :show, status: :created, location: @pizza }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @pizza.errors, status: :unprocessable_entity }
@@ -39,9 +38,8 @@ class PizzasController < ApplicationController
   def update
     respond_to do |format|
       if @pizza.update(pizza_params)
-        format.turbo_stream do
-          render turbo_stream: turbo_stream.replace('pizzas', partial: "pizzas/pizza", locals: {pizza: @pizza} )
-        end
+        format.html { redirect_to topping_url(@pizza), notice: "Pizza was successfully updated." }
+        format.json { render :show, status: :ok, location: @pizza }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @pizza.errors, status: :unprocessable_entity }
@@ -66,7 +64,13 @@ class PizzasController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def pizza_params
-      params.require(:pizza).permit(:name)
-    end
+     def pizza_params
+       params.require(:pizza).permit(:name, pizza_topping_attributes: %i[
+                                    id
+                                    pizza_id
+                                    topping_id
+                                    topping_ids
+                                    _destroy
+                                  ])
+     end
 end
