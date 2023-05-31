@@ -1,5 +1,4 @@
 class ToppingsController < ApplicationController
-  layout "toppings", except:  %i[ show edit update destroy ]
   before_action :set_topping, only: %i[ show edit update destroy ]
 
   # GET /toppings or /toppings.json
@@ -9,6 +8,7 @@ class ToppingsController < ApplicationController
 
   # GET /toppings/1 or /toppings/1.json
   def show
+
   end
 
   # GET /toppings/new
@@ -26,7 +26,7 @@ class ToppingsController < ApplicationController
 
     respond_to do |format|
       if @topping.save
-        format.html { redirect_to topping_url(@topping), notice: "Topping was successfully created." }
+        format.html { redirect_to toppings_url, notice: "Your topping was successfully created." }
         format.json { render :show, status: :created, location: @topping }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class ToppingsController < ApplicationController
   def update
     respond_to do |format|
       if @topping.update(topping_params)
-        format.html { redirect_to topping_url(@topping), notice: "Topping was successfully updated." }
+        format.html { redirect_to toppings_url, notice: "Your topping was successfully updated." }
         format.json { render :show, status: :ok, location: @topping }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class ToppingsController < ApplicationController
     @topping.destroy
 
     respond_to do |format|
-      format.html { redirect_to toppings_url, notice: "Topping was successfully destroyed." }
+      format.html { redirect_to toppings_url, notice: @topping.name + 'was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -66,6 +66,6 @@ class ToppingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def topping_params
-      params.require(:topping).permit(:name)
+      params.require(:topping).permit(:name, :id)
     end
 end

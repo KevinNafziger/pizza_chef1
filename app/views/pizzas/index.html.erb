@@ -6,30 +6,23 @@
   grid-auto-rows: minmax(150px, auto);
   grid-gap: 3em;
   max-width: 1000px !important;
-  width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
   width: 100%;
   display: flex;
   display: -webkit-flex;
-  justify-content: center;
-  -webkit-justify-content: center;
+}
 
-}
-Gmodule p {
-  color: #474747;
-}
 
 .Gmodule {
   background: white;
-  display: inline-table;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
+  min-width: 280px;
   max-width: 380px;
-  padding: 15px;
-  border-radius: 10px;
+  min-height: 380px;
+  padding: auto;
+  padding-bottom: auto;
+  border-radius: auto;
   -webkit-box-shadow: 0px 0px 25px -16px rgba(161, 161, 161, 1);
   -moz-box-shadow: 0px 0px 25px -16px rgba(161, 161, 161, 1);
   box-shadow: 0px 0px 25px -16px rgba(161, 161, 161, 1);
@@ -37,7 +30,6 @@ Gmodule p {
   margin-left: 5px;
   margin-right: 5px;
   flex: 1 1 100px;
-  margin: 0;
   color: #4f81bd !important;
 }
 
@@ -47,7 +39,7 @@ Gmodule p {
   -moz-box-shadow: 0px 0px 35px -16px rgba(161, 161, 161, 1);
   box-shadow: 0px 0px 35px -16px rgba(161, 161, 161, 1);
 }
-.execpotbody {
+.execspotbody {
   max-width: 1000px;
   margin: auto;
 }
@@ -110,9 +102,9 @@ Gmodule p {
 .card {
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
-  width: 50%;
-  position: relative;
-  border-radius: 12px;
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
@@ -171,26 +163,24 @@ Gmodule p {
 
 .card:hover .card__info-hover {
   opacity: 1;
+
+  h1 {
+    color: #a0a0b7;
+  }
 }
 
 </style>
+<%= render "/layouts/pizza_nav" %>
+<main class="container mx-auto mt-3 p-3 h-full">
+  <div width="100%" class="row-20 w-row" style="text-align:center; margin-left:auto; margin-right:auto;">
+    <h1 style="margin-top:35px; margin-bottom:30px;" class="heading-26 brandh1">Pizzas</h1>
 
-<% if notice.present? %>
-  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-<% end %>
+    <div style="height:2px;margin-bottom:25px;" class="bluebar center"></div>
 
-<div width="100%" class="row-20 w-row" style="text-align:center; margin-left:auto; margin-right:auto;">
- <h1 style="margin-top:35px; margin-bottom:30px;" class="heading-25 brandh1">Pizzas</h1>
-
-
-<div style="height:2px;margin-bottom:25px;" class="bluebar center"></div>
-
-
-
-  <div class="execspotbody"><br>
-    <section class="Fgrid flex-wrap-reverse">
-      <%= render @pizzas %>
-    </section>
+      <div class="execspotbody"><br>
+        <section class="Fgrid">
+          <%= render @pizzas %>
+        </section>
+      </div>
   </div>
-
-</div>
+</main>

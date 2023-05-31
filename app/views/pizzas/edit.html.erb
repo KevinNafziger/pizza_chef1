@@ -1,9 +1,24 @@
-<%= turbo_frame_tag :modal do %>
-  <div class="modal">
-    <div data-controller="modals" data-action="turbo:submit-end->modals#submitEnd">
-    <h1 class="font-bold text-4xl">Edit Pizza</h1>
-      <%= render "form", pizza: @pizza %>
-      <%= link_to "Cancel", pizzas_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    </div>
-  </div>
+<style>
+  .Fgrid_new {
+  display: flex;
+  grid-gap: 1em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  margin-top: 65px;
+  justify-content: center;
+}
+</style>
+<header class="header" id="top">
+<% if notice.present? %>
+  <span class="px-1 pl-10 pt-2 bg-green-50 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></span>
 <% end %>
+</header>
+<main class="container mx-auto mt-3 p-3 h-full">
+<div class="Fgrid_new">
+  <%= render "form", pizza: @pizza %>
+</div>
+
+<%= link_to "Cancel", pizzas_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+</main<

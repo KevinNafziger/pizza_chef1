@@ -1,8 +1,8 @@
 <%= form_for pizza do |f| %>
+
   <% if pizza.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(pizza.errors.count, "error") %> prohibited this pizza from being saved:</h2>
-
+      <h2><%= pluralize(pizza.errors.count, "error") %> prevented your pizza from being saved:</h2>
       <ul>
         <% pizza.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,21 +10,32 @@
       </ul>
     </div>
   <% end %>
+<div class="container m-9">
+  <% if pizza.new_record? %>
+    <strong class="heading-26 brandh1">New Pizza</strong>
+  <% else %>
+    <h1 class="font-bold text-4xl">Edit Pizza</h1>
+  <% end %>
 
-  <div class="my-5">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  <div class="pb-3 mb-3 mt-10">
+    <b><%= f.label "Name:" %></b><br>
+    <div class="pt-2">
+      <%= f.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none w-full px-2 py-1 mt-2" %>
+    </div>
   </div>
 
-  <div class="my-5">
-    <b><%= f.label "Select Toppings:" %></b><br><br>
-    <div class="px-5">
-      <%= f.collection_check_boxes(:topping_ids, Topping.all, :id, :name) do |b| %>
-        <%= b.label(:"data-value" => b.value) { b.check_box + "   " + b.text } %> <br>
+  <div class="pb-3 mb-3 pt-3">
+    <b><%= f.label "Toppings:" %></b><br>
+
+    <div class="pb-4 px-5 pt-3">
+      <%= f.collection_check_boxes(:topping_ids, Topping.all, :id, :name, { include_hidden: false }) do |b| %>
+        <%= b.label(:"data-value" => b.value) {  b.check_box + "   " + b.text } %> <br>
       <% end %>
     </div>
   </div>
-  <div class="inline">
-    <%= f.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+
+  <div>
+    <%= f.submit class: "rounded-lg py-4 px-7 bg-blue-600 text-white font-lg w-2/3" %>
   </div>
+</div>
 <% end %>

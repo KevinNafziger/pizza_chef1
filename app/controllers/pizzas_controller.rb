@@ -8,15 +8,18 @@ class PizzasController < ApplicationController
 
   # GET /pizzas/1 or /pizzas/1.json
   def show
+
   end
 
   # GET /pizzas/new
   def new
     @pizza = Pizza.new
+    @toppings =Topping.all
   end
 
   # GET /pizzas/1/edit
   def edit
+
   end
 
   # POST /pizzas or /pizzas.json
@@ -25,7 +28,7 @@ class PizzasController < ApplicationController
 
     respond_to do |format|
       if @pizza.save
-        format.html { redirect_to pizza_url(@pizza), notice: "Pizza was successfully created." }
+        format.html { redirect_to pizzas_url(@pizza), notice: "Your pizza was successfully created." }
         format.json { render :show, status: :created, location: @pizza }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +41,7 @@ class PizzasController < ApplicationController
   def update
     respond_to do |format|
       if @pizza.update(pizza_params)
-        format.html { redirect_to topping_url(@pizza), notice: "Pizza was successfully updated." }
+        format.html { redirect_to pizzas_url, notice: "Your pizza was successfully updated." }
         format.json { render :show, status: :ok, location: @pizza }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +55,7 @@ class PizzasController < ApplicationController
     @pizza.destroy
 
     respond_to do |format|
-      format.html { redirect_to pizzas_url, notice: "Pizza was successfully destroyed." }
+      format.html { redirect_to pizzas_url, notice: @pizza.name + ' was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -64,13 +67,8 @@ class PizzasController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-     def pizza_params
-       params.require(:pizza).permit(:name, pizza_topping_attributes: %i[
-                                    id
-                                    pizza_id
-                                    topping_id
-                                    topping_ids
-                                    _destroy
-                                  ])
-     end
+    def pizza_params
+      params.require(:pizza).permit(:name, :id, topping_ids: [])
+    end
+
 end

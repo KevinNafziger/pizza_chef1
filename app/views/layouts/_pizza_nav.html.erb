@@ -1,0 +1,36 @@
+<header class="header" id="top">
+<% if notice.present? %>
+  <span class="px-1 pl-10 pt-2 bg-green-50 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></span>
+<% end %>
+      <div class="container-big">
+        <div class="row">
+          <div class="header__inner col col-12">
+            <div class="logo">
+              <span style="margin-top:65px; margin-left:95px;">
+                 <%= link_to 'Create New Pizza', new_pizza_path, class: "text-lg  rounded-3xl py-6 px-5 bg-blue-400 text-white font-lg" %>
+              <a class="logo__link" href="/">
+              </a>
+              </span>
+            </div>
+
+            <nav class="main-nav">
+              <div class="main-nav__box">
+                <div class="nav__icon-close">
+                  <i class="ion ion-md-close"></i>
+                </div>
+                <div class="nav__title">Chef Bar</div>
+                  <ul class="nav__list list-reset">
+                      <li class="nav__item">
+                        <%= link_to "Home", home_index_path, class: " brandh1 nav__link active-link" %>
+                      </li>
+
+                      <li class="nav__item">
+                         <%= link_to "Toppings", toppings_path, class: "brandh1 nav__link active-link" %>
+                      </li>
+                   </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
