@@ -10,15 +10,16 @@
   justify-content: center;
 }
 </style>
-<header class="header" id="top">
-<% if notice.present? %>
-  <span class="px-1 pl-10 pt-2 bg-green-50 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></span>
-<% end %>
-</header>
-<main class="container mx-auto mt-3 p-3 h-full">
-<div class="Fgrid_new">
-  <%= render "form", pizza: @pizza %>
-</div>
 
-<%= link_to "Cancel", pizzas_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-</main<
+<header class="header" id="top">
+  <% if notice.present? %>
+    <span class="px-1 pl-10 pt-2 bg-green-50 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></span>
+  <% end %>
+</header>
+
+<main class="container m-200 mt-3 p-3 h-full">
+  <div class="Fgrid_new">
+    <%= render "form", pizza: @pizza %>
+  </div>
+  <%= link_to "Cancel", pizzas_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+</main>

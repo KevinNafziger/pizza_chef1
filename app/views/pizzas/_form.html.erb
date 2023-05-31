@@ -1,16 +1,18 @@
 <%= form_for pizza do |f| %>
 
-  <% if pizza.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(pizza.errors.count, "error") %> prevented your pizza from being saved:</h2>
-      <ul>
-        <% pizza.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<% if pizza.errors.any? %>
+  <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+    <h2><%= pluralize(pizza.errors.count, "error") %> prevented your pizza from being saved:</h2>
+    <ul>
+      <% pizza.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <div class="container m-9">
+
   <% if pizza.new_record? %>
     <strong class="heading-26 brandh1">New Pizza</strong>
   <% else %>
@@ -38,4 +40,5 @@
     <%= f.submit class: "rounded-lg py-4 px-7 bg-blue-600 text-white font-lg w-2/3" %>
   </div>
 </div>
+
 <% end %>

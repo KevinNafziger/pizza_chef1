@@ -170,17 +170,18 @@
 }
 
 </style>
+
 <%= render "/layouts/pizza_nav" %>
+
 <main class="container mx-auto mt-3 p-3 h-full">
   <div width="100%" class="row-20 w-row" style="text-align:center; margin-left:auto; margin-right:auto;">
     <h1 style="margin-top:35px; margin-bottom:30px;" class="heading-26 brandh1">Pizzas</h1>
 
     <div style="height:2px;margin-bottom:25px;" class="bluebar center"></div>
-
-      <div class="execspotbody"><br>
-        <section class="Fgrid">
-          <%= render @pizzas %>
-        </section>
-      </div>
+    <div class="execspotbody"><br>
+      <section class="Fgrid">
+        <%= render @pizzas %>
+      </section>
+    </div>
   </div>
 </main>
