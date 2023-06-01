@@ -1,8 +1,5 @@
-
 <style>
   .Fgrid_new {
-  display: flex;
-  grid-gap: 1em;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -18,10 +15,8 @@
   <% end %>
 </header>
 
-<main class="container m-200 mt-3 p-3 h-full">
+<main class="container m-200 mt-3 p-3 h-full w-1/2">
   <div class="Fgrid_new">
-
-  <%= render "form", topping: @topping %>
+    <%= render "form", topping: @topping %>
   </div>
-  <%= link_to "Cancel", pizzas_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
 </main>

@@ -1,33 +1,29 @@
-
 <%= form_with(model: topping, class: "contents") do |form| %>
   <% if topping.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(topping.errors.count, "error") %> prohibited this topping from being saved:</h2>
+  <div id="error_explanation" class="w-full mb-2 bg-red-50 text-red-500 font-medium rounded-lg mt-2">
+    <h4><%= pluralize(topping.errors.count, "error") %> prevented the topping from being saved:</h4>
+    <ul>
+      <% topping.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 
-      <ul>
-        <% topping.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+  <div class="container mx-12 ml-9 p-9">
+    <% if topping.new_record? %>
+      <strong class="heading-26 brandh1">New Topping</strong>
+    <% else %>
+      <strong class="heading-26 brandh1">Edit Topping</strong>
+    <% end %>
+    <div class="my-5">
+      <b><%= form.label "Name:" %></b>
+      <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-3/5" %>
     </div>
-  <% end %>
-
-<div class="container m-9">
-
-  <% if topping.new_record? %>
-    <strong class="heading-26 brandh1">New Topping</strong>
-  <% else %>
-    <h1 class="font-bold text-4xl">Edit Topping</h1>
-  <% end %>
-
-
-  <div class="my-5">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-3/5" %>
+    <div class="inline">
+      <%= form.submit class: "rounded-lg py-3 px-4 bg-blue-400 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
+      <%= link_to "Cancel", toppings_path, class: "ml-2 rounded-lg py-2 px-5 bg-gray-100 inline-block font-medium" %>
+    </div>
   </div>
 
-  <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-4 bg-blue-400  hover:bg-blue-500 text-white inline-block font-medium" %>
-  </div>
 <% end %>
-</div>

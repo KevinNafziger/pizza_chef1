@@ -8,7 +8,6 @@ class PizzasController < ApplicationController
 
   # GET /pizzas/1 or /pizzas/1.json
   def show
-
   end
 
   # GET /pizzas/new
@@ -19,7 +18,6 @@ class PizzasController < ApplicationController
 
   # GET /pizzas/1/edit
   def edit
-
   end
 
   # POST /pizzas or /pizzas.json
@@ -39,6 +37,7 @@ class PizzasController < ApplicationController
 
   # PATCH/PUT /pizzas/1 or /pizzas/1.json
   def update
+
     respond_to do |format|
       if @pizza.update(pizza_params)
         format.html { redirect_to pizzas_url, notice: "Your pizza was successfully updated." }
