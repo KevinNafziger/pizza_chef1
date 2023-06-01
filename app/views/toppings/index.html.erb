@@ -16,7 +16,6 @@
   display: -webkit-flex;
   justify-content: center;
   -webkit-justify-content: center;
-
 }
 
 .Gmodule {
@@ -171,13 +170,11 @@
   <div width="100%" class="row-20 w-row" style="text-align:center; margin-left:auto; margin-right:auto;">
     <h1 style="margin-top:35px; margin-bottom:30px; font-weight:700" class="heading-26 brandh1">Toppings</h1>
     <div style="height:2px;margin-bottom:25px;" class="bluebar center"></div>
-
     <div class="execspotbody"><br>
       <section class="Fgrid flex-wrap">
-
         <%= render @toppings %>
-       <%= turbo_frame_tag "remote_modal" %>
+        <%= turbo_frame_tag "remote_modal" %>
       </section>
-     </div>
+    </div>
   </div>
 </main>

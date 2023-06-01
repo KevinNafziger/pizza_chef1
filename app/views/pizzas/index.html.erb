@@ -182,8 +182,8 @@
 
     <div class="execspotbody"><br>
       <section class="Fgrid">
+        <%= turbo_frame_tag "remote_modal" %>
         <%= render @pizzas %>
-          <%= turbo_frame_tag "remote_modal" %>
       </section>
     </div>
   </div>

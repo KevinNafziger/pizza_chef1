@@ -26,7 +26,7 @@ class ToppingsController < ApplicationController
 
     respond_to do |format|
       if @topping.save
-        format.html { redirect_to toppings_url, notice: "Your topping was successfully created." }
+        format.html { redirect_to toppings_url, notice: "The topping was successfully created." }
         format.json { render :show, status: :created, location: @topping }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class ToppingsController < ApplicationController
   def update
     respond_to do |format|
       if @topping.update(topping_params)
-        format.html { redirect_to toppings_url, notice: "Your topping was successfully updated." }
+        format.html { redirect_to toppings_url, notice: "The topping was successfully updated." }
         format.json { render :show, status: :ok, location: @topping }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,8 @@ class ToppingsController < ApplicationController
     @topping.destroy
 
     respond_to do |format|
-      format.html { redirect_to toppings_url, notice: @topping.name + 'was successfully deleted.' }
+      format.html { redirect_to toppings_url, notice: "The topping was successfully deleted." }
+        format.json { render :show, status: :ok, location: @topping }
       format.json { head :no_content }
     end
   end

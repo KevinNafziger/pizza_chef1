@@ -7,3 +7,5 @@ application.debug = false
 window.Stimulus   = application
 window.bootstrap = bootstrap
 export { application }
+
+

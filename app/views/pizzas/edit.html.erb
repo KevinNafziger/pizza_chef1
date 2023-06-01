@@ -1,13 +1,13 @@
 <style>
   .Fgrid_new {
-  display: flex;
-  grid-gap: 1em;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 80px;
-  margin-top: 65px;
-  justify-content: center;
+    display: flex;
+    grid-gap: 1em;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    margin-top: 65px;
+    justify-content: center;
 }
 </style>
 
@@ -19,7 +19,7 @@
 
 <main class="container m-200 mt-3 p-3 h-full w-full">
   <div class="Fgrid_new">
+    <%= turbo_frame_tag "remote_modal" %>
     <%= render "form", pizza: @pizza %>
   </div>
-    <%= turbo_frame_tag "remote_modal" %>
 </main>

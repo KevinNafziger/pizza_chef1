@@ -1,8 +1,13 @@
 
 <header class="header" id="top">
-<% if notice.present? %>
-  <span class="px-1 pl-10 pt-2 bg-green-50 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></span>
-<% end %>
+
+  <% if notice.present? %>
+    <div style="margin:12px; margin-top:0px;">
+      <span class="p-3 bg-green-50 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></span>
+    </div>
+  <% end %>
+
+
       <div class="container-big">
         <div class="row">
           <div class="header__inner col col-12">

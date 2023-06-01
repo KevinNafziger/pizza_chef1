@@ -26,7 +26,7 @@ class PizzasController < ApplicationController
 
     respond_to do |format|
       if @pizza.save
-        format.html { redirect_to pizzas_url(@pizza), notice: "Your pizza was successfully created." }
+        format.html { redirect_to pizzas_url(@pizza), notice: "The pizza was successfully created." }
         format.json { render :show, status: :created, location: @pizza }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -54,7 +54,7 @@ class PizzasController < ApplicationController
     @pizza.destroy
 
     respond_to do |format|
-      format.html { redirect_to pizzas_url, notice: @pizza.name + ' was successfully deleted.' }
+      format.html { redirect_to pizzas_url, notice: "The pizza was successfully deleted." }
       format.json { head :no_content }
     end
   end
