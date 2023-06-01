@@ -174,8 +174,10 @@
 
     <div class="execspotbody"><br>
       <section class="Fgrid flex-wrap">
+
         <%= render @toppings %>
-       </section>
+       <%= turbo_frame_tag "remote_modal" %>
+      </section>
      </div>
   </div>
 </main>

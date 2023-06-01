@@ -40,7 +40,7 @@ class PizzasController < ApplicationController
 
     respond_to do |format|
       if @pizza.update(pizza_params)
-        format.html { redirect_to pizzas_url, notice: "Your pizza was successfully updated." }
+        format.html { redirect_to pizzas_url, notice: "The pizza was successfully updated." }
         format.json { render :show, status: :ok, location: @pizza }
       else
         format.html { render :edit, status: :unprocessable_entity }

@@ -1,22 +1,31 @@
-<%= form_for pizza do |f| %>
-
-<% if pizza.errors.any? %>
-<div id="error_explanation" class="w-full ml-3 bg-red-50 text-red-500 font-medium rounded-lg mx-2 py-2">
-  <h4><%= pluralize(pizza.errors.count, "error") %> prevented the pizza from being saved:</h4>
-  <ul class="list-disc">
-    <% pizza.errors.each do |error| %>
-      <li><%= error.full_message %></li>
-    <% end %>
-  </ul>
-</div>
-<% end %>
-
-<div class="container m-11 ml-8">
-  <% if pizza.new_record? %>
+<%= turbo_frame_tag :remote_modal, target: :_top do %>
+  <div class="modal fade" data-controller="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <% if pizza.new_record? %>
     <strong class="heading-26 brandh1">New Pizza</strong>
   <% else %>
      <strong class="heading-26 brandh1">Edit Pizza</strong>
   <% end %>
+
+        </div>
+        <div class="modal-body">
+
+<%= form_for pizza do |f| %>
+
+<% if pizza.errors.any? %>
+  <div id="error_explanation" class="w-full bg-red-50 text-red-500 font-medium rounded-lg py-5 pb-1 mb-1 px-4 mt-1">
+    <h6 class="pt-2 mb-0"><%= pluralize(pizza.errors.count, "error") %> prevented your pizza from being saved:</h6>
+    <ul class="list-outside">
+      <% pizza.errors.each do |error| %>
+        <li class="list-disc ml-6 "><%= error.full_message %></li>
+      <% end %>
+    </ul>
+</div>
+<% end %>
+
+<div class="container m-11 ml-8">
 
   <div class="my-5">
     <strong><%= f.label "Name:" %></strong><br>
@@ -28,6 +37,7 @@
   <div class="pb-3 mb-3 pt-3">
     <b><%= f.label "Toppings:" %></b><br>
     <div class="pb-4 px-5 pt-3">
+      <%= hidden_field_tag "pizza[topping_ids][]", nil %>
       <%= f.collection_check_boxes(:topping_ids, Topping.all, :id, :name, { include_hidden: false }) do |b| %>
         <%= b.label(:"data-value" => b.value) {  b.check_box + "   " + b.text } %> <br>
       <% end %>
@@ -40,4 +50,9 @@
   </div>
 </div>
 
+<% end %>
+</div>
+        </div>
+      </div>
+    </div>
 <% end %>

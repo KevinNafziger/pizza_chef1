@@ -3,7 +3,7 @@
     <strong class="block font-medium mb-1 brandh1"><%= topping.name %></strong>
   </p>
   <div class="mx-auto justiy-contents-bottom">
-    <%= link_to edit_topping_path(topping), class: "rounded py-3 ml-2 px-5 bg-gray-50 inline-block" do %>
+    <%= link_to edit_topping_path(topping), "data-controller": "turbo" , class: "rounded py-3 ml-2 px-5 bg-gray-50 inline-block" do %>
       <i class="fa fa-edit"></i> Edit
     <% end %>
     <div class="inline-block ml-2">

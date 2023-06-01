@@ -15,7 +15,7 @@
   </div>
 
   <div class="mx-auto justiy-contents-bottom">
-      <%= link_to edit_pizza_path(pizza.id), class: "rounded py-3 ml-2 px-5 bg-gray-50 inline-block" do %>
+      <%= link_to edit_pizza_path(pizza.id),"data-controller": "turbo", class: "rounded py-3 ml-2 px-5 bg-gray-50 inline-block" do %>
         <i class="fa fa-edit"></i> Edit
       <% end %>
       <div class="inline-block ml-2">
