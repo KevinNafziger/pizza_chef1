@@ -1,4 +1,3 @@
-# javascript/controllers/turbo_controller.js
 import { Controller } from "@hotwired/stimulus"
 import { Turbo } from "@hotwired/turbo-rails"
 

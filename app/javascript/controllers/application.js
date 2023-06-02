@@ -8,4 +8,6 @@ window.Stimulus   = application
 window.bootstrap = bootstrap
 export { application }
 
-
+Turbo.setConfirmMethod( () => {
+  let dialog = Document.getElementbyId('turbo-confirm')
+})

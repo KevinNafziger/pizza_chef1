@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/ifad/data-confirm-modal.git
+  revision: 404119ad5bf7754c31af41e35935e365c69dcd92
+  specs:
+    data-confirm-modal (1.6.3)
+      railties (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -249,6 +256,10 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    view_component (3.1.0)
+      activesupport (>= 5.2.0, < 8.0)
+      concurrent-ruby (~> 1.0)
+      method_source (~> 1.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -274,6 +285,7 @@ DEPENDENCIES
   bootstrap
   byebug
   capybara
+  data-confirm-modal!
   debug
   erb_lint
   importmap-rails
@@ -290,6 +302,7 @@ DEPENDENCIES
   tailwindcss-rails
   turbo-rails
   tzinfo-data
+  view_component
   web-console
   webdrivers
 

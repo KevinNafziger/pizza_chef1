@@ -50,6 +50,8 @@ gem "bootsnap", require: false
 
 gem 'erb_lint', require: false
 gem 'bootstrap'
+gem "view_component"
+gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
