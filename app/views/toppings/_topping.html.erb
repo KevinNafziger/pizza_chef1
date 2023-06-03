@@ -1,8 +1,10 @@
-<div id="<%= dom_id topping %>"   style="border:1px solid" class="card Gmodule md:w-2/3 card--1 flex flex-col justify-between">
+<div id="<%= dom_id topping %>" style="border:1px solid" class="card Gmodule md:w-2/3 card--1 flex flex-col justify-between">
+
   <p class="my-5 flex-grow">
     <strong class="block font-medium mb-1 brandh1"><%= topping.name %></strong>
   </p>
-   <div class="flex-grow mt-3 mb-3">
+
+  <div class="flex-grow mt-3 mb-3">
     <% unless topping.pizzas.empty? %>
       <div class="m-1">
         <i>Pizzas with <%= topping.name %> </i><br>
@@ -15,10 +17,12 @@
     <%= link_to edit_topping_path(topping), "data-controller": "turbo" , class: "rounded py-3 ml-2 px-5 bg-gray-50 inline-block" do %>
       <i class="fa fa-edit"></i> Edit
     <% end %>
+
     <div data-controller="toppings" class="inline-block ml-2">
       <%= button_to topping_path(topping), form: { controller:"toppings", "message-value": "Are you sure?", action: "submit->toppings#confirm" }, class: "mt-1 rounded py-3 px-5 bg-gray-50", method: :delete do  %>
         <i class="fa fa-trash"></i> Delete
       <% end %>
     </div>
   </div>
+
 </div>

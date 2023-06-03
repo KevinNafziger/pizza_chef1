@@ -2,7 +2,6 @@
   <p class="my-2">
     <strong class="font-medium mb-0 brandh1"><%= pizza.name %></strong>
   </p>
-
   <div class="flex-grow mt-3 mb-3">
     <% unless pizza.toppings.empty? %>
       <div class="m-1">
@@ -11,8 +10,8 @@
       </div>
     <% end %>
   </div>
-
   <div class="mx-auto justiy-contents-bottom">
+
     <%= link_to edit_pizza_path(pizza.id),"data-controller": "turbo", class: "rounded py-3 ml-2 px-5 bg-gray-50 inline-block" do %>
       <i class="fa fa-edit"></i> Edit
     <% end %>
@@ -22,5 +21,5 @@
         <i class="fa fa-trash"></i> Delete
       <% end %>
     </div>
-  </div>
-</div>
+  </div>  <!--- end div action and icon section -->
+</div>  <!--- end card

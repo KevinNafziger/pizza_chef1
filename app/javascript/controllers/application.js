@@ -9,5 +9,5 @@ window.bootstrap = bootstrap
 export { application }
 
 Turbo.setConfirmMethod( () => {
-  let dialog = Document.getElementbyId('turbo-confirm')
+  let dialog = Document.getElementById('turbo-confirm')
 })
