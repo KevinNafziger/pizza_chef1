@@ -5,16 +5,16 @@
         <div class="modal-header">
           <strong class="heading-26 brandh1"><%= pizza.new_record? ? "New Pizza": "Edit Pizza" %></strong>
         </div>
+
         <div class="modal-body">
           <%= form_for pizza do |f| %>
-
             <% if pizza.errors.any? %>
               <div id="error_explanation" class="w-full bg-red-50 text-red-500 font-medium rounded-lg py-5 pb-1 mb-1 px-4 mt-1">
                 <h6 class="pt-2 mb-0"><%= pluralize(pizza.errors.count, "error") %> prevented your pizza from being saved:</h6>
                 <ul class="list-outside">
                   <% pizza.errors.each do |error| %>
                     <li class="list-disc ml-6 "><%= error.full_message %></li>
-                    <% end %>
+                  <% end %>
                 </ul>
               </div>
             <% end %>
@@ -25,19 +25,18 @@
                 <%= f.text_field :name, class: "block shadow rounded-lg border border-gray-200 outline-none w-full px-4 py-2 mt-2" %>
               </div>
             </div>
-
             <div class="pb-3 mb-3 pt-3">
               <b><%= f.label "Toppings:" %></b><br>
-              <span class="ml-5">
-                <% unless Topping.all.empty? %>
-                  <%= hidden_field_tag "pizza[topping_ids][]", nil %>
-                  <%= f.collection_check_boxes(:topping_ids, Topping.all, :id, :name, { include_hidden: false }) do |b| %>
-                    <%= b.label(:"data-value" => b.value) {  b.check_box + "   " + b.text } %> <br>
-                  <% end %>
+              <div class="ml-5 h-32 overflow-y-auto">
+                 <% if Topping.all.any? %>
+                   <%= hidden_field_tag "pizza[topping_ids][]", nil %>
+                     <%= f.collection_check_boxes(:topping_ids, Topping.all, :id, :name, { include_hidden:  false }) do |b| %>
+                        <%= b.label(:"data-value" => b.value) {  b.check_box + "   " + b.text } %><br>
+                     <% end %>
                 <% else %>
-                   <small><i>No toppings available.</i></small>
+                   <small><i>No toppings available.</i/></small>
                 <% end %>
-              </span>
+              </div>
             </div>
             <div class="m-0 p-0">
               <%= f.submit class: "rounded-lg py-3 px-3 bg-blue-400 hover:bg-blue-500 text-white font-md  cursor-pointer mr-1" %>

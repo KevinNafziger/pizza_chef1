@@ -11,7 +11,6 @@
 }
 </style>
 
-
 <header class="header" id="top">
   <% if notice.present? %>
     <span class="px-1 pl-10 pt-2 bg-green-50 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></span>
@@ -20,6 +19,7 @@
 
 <main class="container m-200 mt-3 p-3 h-full w-full">
   <div class="Fgrid_new">
+    <%= turbo_frame_tag "remote_modal" %>
     <%= render "form", pizza: @pizza %>
   </div>
 </main>

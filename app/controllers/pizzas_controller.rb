@@ -22,6 +22,7 @@ class PizzasController < ApplicationController
 
   # POST /pizzas or /pizzas.json
   def create
+
     @pizza = Pizza.new(pizza_params)
 
     respond_to do |format|
@@ -67,7 +68,7 @@ class PizzasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pizza_params
-      params.require(:pizza).permit(:name, :id, topping_ids: [])
+      params.require(:pizza).permit(:name, :id, topping_ids: [] )
     end
 
 end

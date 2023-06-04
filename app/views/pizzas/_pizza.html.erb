@@ -1,7 +1,9 @@
 <div class="card Gmodule md:w-2/3 rounded-3xl flex flex-col justify-between" style="border:1px solid" >
-  <p class="my-2">
-    <strong class="font-medium mb-0 brandh1"><%= pizza.name %></strong>
+  <p class="my-3 flex-grow">
+    <strong style="overflow-wrop:break-word;"
+    class="block font-medium mb-0 p-1 brandh1"><%= pizza.name %></strong>
   </p>
+
   <div class="flex-grow mt-3 mb-3">
     <% unless pizza.toppings.empty? %>
       <div class="m-1">
@@ -10,8 +12,8 @@
       </div>
     <% end %>
   </div>
-  <div class="mx-auto justiy-contents-bottom">
 
+  <div class="mx-auto justiy-contents-bottom">
     <%= link_to edit_pizza_path(pizza.id),"data-controller": "turbo", class: "rounded py-3 ml-2 px-5 bg-gray-50 inline-block" do %>
       <i class="fa fa-edit"></i> Edit
     <% end %>
@@ -22,4 +24,4 @@
       <% end %>
     </div>
   </div>  <!--- end div action and icon section -->
-</div>  <!--- end card
+</div>  <!--- end card-->
