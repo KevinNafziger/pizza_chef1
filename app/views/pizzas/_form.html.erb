@@ -33,9 +33,10 @@
                      <%= f.collection_check_boxes(:topping_ids, Topping.all, :id, :name, { include_hidden:  false }) do |b| %>
                         <%= b.label(:"data-value" => b.value) {  b.check_box + "   " + b.text } %><br>
                      <% end %>
-                <% else %>
+                     
+                 <% else %>
                    <small><i>No toppings available.</i/></small>
-                <% end %>
+                 <% end %>
               </div>
             </div>
             <div class="m-0 p-0">

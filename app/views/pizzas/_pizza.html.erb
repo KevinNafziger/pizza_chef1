@@ -14,12 +14,12 @@
   </div>
 
   <div class="mx-auto justiy-contents-bottom">
-    <%= link_to edit_pizza_path(pizza.id),"data-controller": "turbo", class: "rounded py-3 ml-2 px-5 bg-gray-50 inline-block" do %>
+    <%= link_to edit_pizza_path(pizza.id),"data-controller": "turbo", class: "hover:ring-2 hover:ring-offset-green-600 rounded py-3 ml-2 px-5 bg-gray-50 inline-block" do %>
       <i class="fa fa-edit"></i> Edit
     <% end %>
 
     <div class="inline-block ml-2">
-      <%= button_to pizza_path(pizza), method: :delete, class: "mt-1 rounded py-3 px-5 bg-gray-50" do %>
+      <%= button_to pizza_path(pizza), method: :delete, data: { "turbo_method": :delete }, class: "hover:ring-2 hover:ring-offset-green-600 mt-1 rounded py-3 px-5 bg-gray-50" do %>
         <i class="fa fa-trash"></i> Delete
       <% end %>
     </div>

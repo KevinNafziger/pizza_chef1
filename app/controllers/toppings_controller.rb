@@ -54,8 +54,8 @@ class ToppingsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to toppings_url, notice: "The topping was successfully deleted." }
-        format.json { render :show, status: :ok, location: @topping }
       format.json { head :no_content }
+      foramt.turbo_stream {   }
     end
   end
 
