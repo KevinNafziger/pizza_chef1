@@ -15,6 +15,7 @@ RSpec.feature "PizzaManagement", type: :feature do
     expect(page).to have_text('Pizza 1')
     expect(page).to have_text(topping1.name)
   end
+  
   scenario 'user creates a new topping' do
     visit toppings_url
 
@@ -22,9 +23,7 @@ RSpec.feature "PizzaManagement", type: :feature do
     fill_in 'topping_name', :with => 'Topping 42'
 
     click_button 'Create Topping'
-
     expect(page).to have_text('Topping 42')
-
   end
 
 end
