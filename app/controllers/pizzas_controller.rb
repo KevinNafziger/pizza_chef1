@@ -13,7 +13,6 @@ class PizzasController < ApplicationController
   # GET /pizzas/new
   def new
     @pizza = Pizza.new
-    @toppings =Topping.all
   end
 
   # GET /pizzas/1/edit
@@ -42,7 +41,6 @@ class PizzasController < ApplicationController
     respond_to do |format|
       if @pizza.update(pizza_params)
         format.html { redirect_to pizzas_url, notice: "The pizza was successfully updated." }
-        format.json { render :show, status: :ok, location: @pizza }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @pizza.errors, status: :unprocessable_entity }
@@ -65,9 +63,8 @@ class PizzasController < ApplicationController
     def set_pizza
       @pizza = Pizza.find(params[:id])
     end
-.
+
     def pizza_params
       params.require(:pizza).permit(:name, :id, topping_ids: [] )
     end
-
 end

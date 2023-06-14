@@ -30,7 +30,6 @@ gem "tailwindcss-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem 'bootstrap'
 
 gem "pg"
 
@@ -51,9 +50,10 @@ gem "bootsnap", require: false
 
 gem 'erb_lint', require: false
 gem 'bootstrap'
+gem "escompress"
 
 # Use Sass togem "aws-sdk-s3" process CSS
-# gem "sassc-rails"
+ gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -77,6 +77,13 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
+  gem 'capybara-screenshot'
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "rspec-rails"
+  gem 'rspec-activemodel-mocks'
+  gem 'rspec-collection_matchers'
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
 end

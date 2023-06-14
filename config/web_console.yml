@@ -1,9 +1,0 @@
-# config/web_console.yml
-default: &default
-  allowed_ips: 201.142.241.77
-
-development:
-  <<: *default
-
-test:
-  <<: *default

@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <!--- <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %> -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "chef", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "https://pro.fontawesome.com/releases/v5.10.0/css/all.css" %>
@@ -17,7 +17,7 @@
     </style>
   </head>
 
-  <body>
+  <body class="m-12">
     <%= yield %>
   </body>
 

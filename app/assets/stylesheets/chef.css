@@ -109,7 +109,7 @@
 .w-tab-link {
   margin: 100px;
   border-radius: 50px !important;
-  background-color: rgb(255, 255, 255);
+  background-color: RGB(255, 255, 255);
   color: rgba(20, 160, 253, .82);
   border: solid 1px;
   height: auto;
@@ -339,7 +339,7 @@ h1 {
 .w-tab-link {
   margin: 100px;
   border-radius: 50px !important;
-  background-color: rgb(255, 255, 255);
+  background-color: RGB(255, 255, 255);
   color: rgba(20, 160, 253, .82);
   border: solid 1px;
   height: auto;
@@ -445,7 +445,7 @@ h1 {
   margin-right: 5px;
   flex: 1 1 100px;
   margin: 0;
-  color: #4f81bd !important;
+  color: #040803e0  !important;
 }
 
 .Gmodule:hover {
@@ -595,10 +595,10 @@ img {
 }
 
 .brandh1 {
-  background: -webkit-linear-gradient(#6b69ca, rgba(20, 160, 253, 0.82));
+  background: #fdb515;;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: rgba(20, 160, 253, 0.82);
+  color:  #7c4182;
   font-size: 40px;
 }
 
@@ -610,7 +610,7 @@ img {
   background: -webkit-linear-gradient(#6b69ca, rgba(20, 160, 253, 0.82));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: rgba(20, 160, 253, 0.82);
+  color:  #7c4182;
 }
 
 .w-col {
@@ -618,7 +618,7 @@ img {
 }
 
 .nav-menu-2 {
-  background-color: rgb(20, 156, 253) !important;
+  background-color: RGB(20, 156, 253) !important;
   box-shadow: 0px -11px 20px 2px #ccc, 6px -8px 18px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -628,11 +628,11 @@ img {
 
 .newfeaturesheader {
   border-radius: 5px;
-  background-image: linear-gradient(180deg, #ffffffd1 20%, #cfe9ff87 39%, #eefeff 80%);
+  background-image: linear-gradient(180deg,#fdb515 20%, #7c4182 39%, #eefeff 80%);
   font-size: 30px;
   text-align: center;
   font-family: poppins, sans-serif;
-  color: #337ab7 !important;
+  color: yellow !important;
 }
 
 .div-block-64 {
@@ -658,7 +658,7 @@ img {
     transform: translate(-50%, -50%);
 
     overflow: auto;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: white;
     border-radius: 5px;
     /* Add the drop shadow */
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.2), 0 5px 5px 0 rgba(0,0,0,0.19);

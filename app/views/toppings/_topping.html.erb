@@ -13,12 +13,12 @@
   </div>
 
   <div class="mx-auto justiy-contents-bottom">
-    <%= link_to edit_topping_path(topping), "data-controller": "turbo", class: "rounded py-3 px-3 bg-gray-50 inline-block hover:ring-offset-green-30 hover:ring-2" do %>
+    <%= link_to edit_topping_path(topping), "data-controller": "turbo", class: "rounded py-3 px-3 bg-gray-50 inline-block hover:ring-yellow-500 hover:ring-2" do %>
       <i class="fa fa-edit"></i> Edit
     <% end %>
 
     <div class="inline-block ml-2">
-      <%= button_to topping_path(topping), class: "mt-1 rounded py-3 px-5 bg-gray-50 hover:ring-2 hover:ring-offset-blue-600", method: :delete, data: { "turbo_method": :delete } do %>
+      <%= button_to topping_path(topping), class: "mt-1 rounded py-3 px-5 bg-gray-50 hover:ring-2 hover:ring-yellow-500", method: :delete, data: { "turbo_method": :delete } do %>
         <i class="fa fa-trash"></i> Delete
       <% end %>
     </div>
