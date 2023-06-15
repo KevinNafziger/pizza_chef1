@@ -7,11 +7,11 @@
  uses PostGresSQL but should work with any sql-database.
 
 ## Demo
- * See the [demo](https://pizzachefapp.com) at https://pizzachefapp.com
+ * At https://pizzachefapp.com
  *
 ## Testing
  * Testing is with RSpec and Capbyara.
- * To run the test suite run the command below from the root of your Rails app:
+ * To run the test suite:
 
  installation.
 
