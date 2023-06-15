@@ -5,11 +5,14 @@
 
 
 ## Demo
- * https://pizzachefapp.com
- *
+ * https://pizzachefapp.com <br>
+
 ## Testing
  * Test suite uses RSpec and Capbyara.
  * To run:
+ ```sh
+   rspec spec
+ ```
 
  installation.
 
