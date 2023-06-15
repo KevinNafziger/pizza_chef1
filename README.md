@@ -29,19 +29,10 @@
  * https://pizzachefapp.com <br>
 
 ## Testing
- * Test suite uses RSpec and Capbyara.
- * To run:
+ *RSpec and Capbyara.
+ * Run test suite from the parent directory:
  ```sh
    rspec spec
  ```
 
- installation.
 
-* or the root directory of the Rails Project.
-*
-
-
-
-* Deployment instructions
-
-* ...
