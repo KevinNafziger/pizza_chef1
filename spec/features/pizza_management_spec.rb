@@ -16,7 +16,7 @@ RSpec.feature "PizzaManagement", type: :feature do
     expect(page).to have_text(topping1.name)
   end
   
-  scenario 'user creates a new topping' do
+  scenario 'user creates a topping, then deletes the topping' do
     visit toppings_url
 
     click_link('Create Topping')
