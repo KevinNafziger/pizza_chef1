@@ -1,16 +1,20 @@
 # README
 
-
+## Configuration
 * Ruby 3.14, with Rails 7.05
 
-* System dependencies
+  Database: uses PostGresSQL but should work with any sql-database.
 
-* Configuration
+## Demo
+ * See the [live demo](https://pizzachefapp.com) at https://pizzachefapp.com
 * Database creation
 
-* Database initialization
+## Pizza Chef uses the RSpec with Capbyara for testing.
 
-* Tests are written in RSpec.  To run the test suite type the following command in terminal from the directory
+ To run the test suite run the command below from the root of your Rails app:
+
+ installation.
+
 * or the root directory of the Rails Project.
 *
 
