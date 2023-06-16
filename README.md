@@ -26,7 +26,7 @@
 ```sh
   rails db:migrate
 ```
-* Mac and Linux users can run "bin/dev" from the command line and see their development server running at localhost:8080. The setup should also work on Windows, although  some additional configuration may be needed to get both Tailwindcss and Rails running together.
+* Mac and Linux users can run "bin/dev" from the command line and see their development server running at localhost:8080. The setup should also work on Windows, although some additional configuration may be needed to get both Tailwindcss and Rails running together.
 
 ## Testing
  RSpec/Capbyara
@@ -34,7 +34,7 @@
  ```sh
   rake db:test:prepare
  ```
- * To run all the tests type:
+ * To run all the tests, type:
  ```sh
    rspec spec
  ```
