@@ -8,12 +8,12 @@
 
   <div class="container-big">
     <div class="row">
-      <div class="header__inner col col-12">
-        <div>
-          <span style="margin-top:145px; margin-left:125px;">
-            <%= link_to 'Create New Pizza', new_pizza_path,"data-controller": "turbo", class: "text-lg hover:text-white hover:bg-yellow-400 rounded-3xl py-6 px-5 bg-yellow-300 text-white font-lg" %>
-          </span>
-        </div>
+      <div class="header__inner col col-12 sm:mx-auto sm:my-auto sm:flex-grow">
+          <div class="lg:mt-9; md:mt-8  lg:ml-8 md:ml-7 sm:mx-auto sm:p-5 sm:flex-grow"">
+            <%= link_to 'Create New Pizza', new_pizza_path,"data-controller": "turbo", class: "lg:text-lg md:text-lg hover:text-white hover:bg-yellow-400 lg:rounded-3xl md:rounded-2xl sm:rounded-2xl lg:py-6 md:py-3 lg:px-5 md:px-5  sm:text-md
+    bg-yellow-300 text-white font-lg" %>
+          </div>
+
         <nav class="main-nav">
           <div class="main-nav__box">
 
