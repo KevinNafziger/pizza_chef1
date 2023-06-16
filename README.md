@@ -1,7 +1,7 @@
 # README
 
 ## Configuration
-* Ruby 3.14, Rails 7.05, PostGresSQL, Redis, Nginx, Puma, Ubuntu, Yarn
+* Ruby 3.14, Rails 7.05, PostGreSQL, Redis, Nginx, Puma, Ubuntu, Yarn
 
 ## Installation
 * Clone the repo (from command line):
@@ -20,9 +20,9 @@
 ```sh
   yarn install
 ```
-* Setup your database.yml file in config/database.yml for test, development and production. The demo uses PostGresSQL as the database and the 'pg' gem is included in the Gemfile. However, the configuration can be adapted to user's preferred relational database, if it is supported by RoR.
+* Setup your database.yml file in config/database.yml for test, development and production. The demo uses PostGreSQL as the database and the 'pg' gem is included in the Gemfile. However, the configuration can be adapted to user's preferred relational database, if it is supported by RoR.
 
-* Once you have the databases setup, run the migrations:
+* Once you have the databases creations, run the migrations:
 ```sh
   rails db:migrate
 ```
