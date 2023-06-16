@@ -34,7 +34,7 @@
  ```sh
   rake db:test:prepare
  ```
- *You can then run the full test suite by typing the command below from the parent directory of the app:
+ *You can then run the full test suite by typing the command:
  ```sh
    rspec spec
  ```
