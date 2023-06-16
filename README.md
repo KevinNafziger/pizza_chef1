@@ -20,7 +20,7 @@
 ```sh
   yarn install
 ```
-* Setup your database.yml file in config/database.yml for test, development and production. The demo uses PostGreSQL as the database and the 'pg' gem is included in the Gemfile. However, the configuration can be adapted to user's preferred relational database, if it is supported by RoR.
+* Setup your database.yml file in config/database.yml for test, development and production. The demo uses PostGreSQL as the database and the 'pg' gem is included in the Gemfile. However, the configuration can be adapted for the user's preferred relational database supported by Rails.
 
 * Once you have the databases created, run the migrations:
 ```sh
