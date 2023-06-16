@@ -30,7 +30,7 @@
 
 ## Testing
  *RSpec/Capbyara
- * Before running the test suite, you can make sure sure that all migrations have been run on the test database by typing:
+ * Before running the test suite, you can ensure that all migrations have been run on the test database by typing:
  ```sh
   rake db:test:prepare
  ```
