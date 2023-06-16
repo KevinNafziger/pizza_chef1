@@ -3,20 +3,23 @@ require 'rails_helper'
 RSpec.feature "PizzaManagement", type: :feature do
   let!(:topping1) { create(:topping) }
   let!(:topping2) { create(:topping) }
+  let!(:topping3) { create(:topping) }
 
-  scenario 'user creates a new pizza' do
+  scenario 'user can create a pizza and add toppings' do
     visit pizzas_url
 
     click_link('Create New Pizza')
     fill_in 'pizza_name', :with => 'Pizza 1'
     check(topping1.name)
+    check(topping3.name)
     click_button 'Create Pizza'
 
     expect(page).to have_text('Pizza 1')
     expect(page).to have_text(topping1.name)
+    expect(page).to have_text(topping3.name)
   end
 
-  scenario 'user creates a topping, then changes topping name' do
+  scenario 'user can create a topping, and change its name' do
     visit toppings_url
 
     click_link('Create Topping')
@@ -30,7 +33,7 @@ RSpec.feature "PizzaManagement", type: :feature do
     expect(page).to have_text('aaTopping 43')
   end
 
-  scenario 'user creates a topping, then deletes that topping' do
+  scenario 'user can creates a topping, then delete that topping' do
     visit toppings_url
     click_link('Create Topping')
     fill_in 'topping_name', :with => 'aaaNewTopping'

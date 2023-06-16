@@ -26,6 +26,7 @@
 ```sh
   rails db:migrate
 ```
+* Mac and Linux users can run "bin/dev" from the command line and see the server running on localhost:8080. The setup should also run on Windows but the user may need to make additional changes to the configuration to get both the tailwind and rails service to run simultaneously.
 
 ## Testing
  *RSpec/Capbyara.
