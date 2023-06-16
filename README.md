@@ -35,6 +35,7 @@
   rake db:test:prepare
  ```
  * You can then run all the tests by typing:
+ ```sh
    rspec spec
  ```
 
