@@ -20,19 +20,19 @@
 ```sh
   yarn install
 ```
-* Run migrations
+* Setup your database.yml file in config/database.yml for test, development and production. The demo uses PostGresSQL as the database and the 'pg' gem is included in the application's Gemfile. However, configuration can be adapted to user's preferred relational database,if desired and if the db is supported by RoR.
+
+* Once you have the databases setup, Run the migrations
 ```sh
   rails db:migrate
 ```
 
-## Demo
- * https://pizzachefapp.com <br>
-
 ## Testing
- *RSpec and Capbyara.
- * Run test suite from the parent directory:
+ *RSpec/Capbyara.
+ * To Run the test suite from the parent directory, type:
  ```sh
    rspec spec
  ```
 
-
+## Demo
+ * https://pizzachefapp.com <br>

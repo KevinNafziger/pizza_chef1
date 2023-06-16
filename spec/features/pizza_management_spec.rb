@@ -15,15 +15,28 @@ RSpec.feature "PizzaManagement", type: :feature do
     expect(page).to have_text('Pizza 1')
     expect(page).to have_text(topping1.name)
   end
-  
-  scenario 'user creates a topping, then deletes the topping' do
+
+  scenario 'user creates a topping, then changes topping name' do
     visit toppings_url
 
     click_link('Create Topping')
-    fill_in 'topping_name', :with => 'Topping 42'
+    fill_in 'topping_name', :with => 'aaTopping 42'
 
     click_button 'Create Topping'
-    expect(page).to have_text('Topping 42')
+    expect(page).to have_text('aaTopping 42')
+    first(:link, 'Edit').click
+    fill_in 'topping_name', :with => 'aaTopping 43'
+    click_button 'Update Topping'
+    expect(page).to have_text('aaTopping 43')
   end
 
+  scenario 'user creates a topping, then deletes that topping' do
+    visit toppings_url
+    click_link('Create Topping')
+    fill_in 'topping_name', :with => 'aaaNewTopping'
+    click_button 'Create Topping'
+    expect(page).to have_text('aaaNewTopping')
+    first(:button, 'Delete').click
+    expect(page).to have_text('The topping was successfully deleted.')
+  end
 end
