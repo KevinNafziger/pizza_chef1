@@ -20,17 +20,17 @@
 ```sh
   yarn install
 ```
-* Setup your database.yml file in config/database.yml for test, development and production. The demo uses PostGresSQL as the database and the 'pg' gem is included in the Gemfile. However, the configuration can be adapted to user's preferred relational database,if it is supported by RoR.
+* Setup your database.yml file in config/database.yml for test, development and production. The demo uses PostGresSQL as the database and the 'pg' gem is included in the Gemfile. However, the configuration can be adapted to user's preferred relational database, if it is supported by RoR.
 
 * Once you have the databases setup, run the migrations:
 ```sh
   rails db:migrate
 ```
-* Mac and Linux users can run "bin/dev" from the command line and see ther development server running at localhost:8080. The setup should also work on Windows  some additional configuration may be needed to  get both tailwind and rails running together.
+* Mac and Linux users can run "bin/dev" from the command line and see ther development server running at localhost:8080. The setup should also work on Windows, although  some additional configuration may be needed to get both tailwind and rails running together.
 
 ## Testing
  *RSpec/Capbyara.
- * Before running the test suite, make sure that all migrations have been run on the test database.  This can be done by typing
+ * Before running the test suite, make sure that all migrations have been run on the test database.  This can be done by typing the text below from the command line in the parent directory of the app.
  ```sh
   rake db:test:prepare
  ```
