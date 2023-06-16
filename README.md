@@ -29,12 +29,12 @@
 * Mac and Linux users can run "bin/dev" from the command line and see their development server running at localhost:8080. The setup should also work on Windows, although  some additional configuration may be needed to get both tailwind and rails running together.
 
 ## Testing
- *RSpec/Capbyara.
- * Before running the test suite, make sure that all migrations have been run on the test database.  This can be done by running:
+ *RSpec/Capbyara
+ * Before running the test suite, you can make sure sure that all migrations have been run on the test database by typing:
  ```sh
   rake db:test:prepare
  ```
- * After ensuring the migrations have run on the test db, you can run the full test suite by typing the command below from the parent directory of the app:
+ *You can then run the full test suite by typing the command below from the parent directory of the app:
  ```sh
    rspec spec
  ```
