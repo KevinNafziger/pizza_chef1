@@ -1,10 +1,18 @@
 # README
 
-## Configuration
-* Ruby 3.14, Rails 7.05, PostGreSQL, Redis, Nginx, Puma, Ubuntu, Yarn
+## Configuration for Demo
+* Ruby 3.14, Rails 7.05, PostgreSQL, Redis, Nginx, Puma, Ubuntu, Yarn
 
-## Installation
-* Clone the repo (from command line):
+## Installing locally
+Redis and Nginx should not be needed to run the app locally. To skip installing Redis in development, include this line in your <i>config/development.rb</i> file:
+```sh
+config.cache_store = :null_store
+```
+Before cloning the app, make sure to have <b>Ruby 3.14</b> set as your default Ruby version for the directory where you copy the code. The Demo app uses PostgreSQL, but MySQL and sqlite3 should work too. Thanks, and enjoy designing pizzas with <i>Pizza Chef</i>!
+
+To start running <i>Pizza Chef</i> on your local machine:
+
+* Clone the repo:
  ```sh
    git clone https://github.com/KevinNafziger/pizza_chef1.git
  ```
@@ -20,21 +28,21 @@
 ```sh
   yarn install
 ```
-* Setup your database.yml file in config/database.yml for test, development and production. The demo uses PostGreSQL as the database and the 'pg' gem is included in the Gemfile. However, the configuration can be adapted to the user's preferred relational database supported by Rails.
+* Setup your database.yml file in config/database.yml for test, development and production. The demo uses PostgreSQL as the database and the 'pg' gem is included in the Gemfile. However, the configuration can be adapted to the user's preferred relational database.
 
-* Once you have the databases created, run the migrations:
+* Once databases have been created, you can run migrations on your devevlopment database by typing:
 ```sh
   rails db:migrate
 ```
-* Mac and Linux users can run "bin/dev" from the command line and see their development server running at localhost:8080. The setup should also work on Windows, although some additional configuration may be needed to get both Tailwindcss and Rails running together.
-
+* Mac and Linux users can run "bin/dev" from the command line and see their development server running at localhost:8080 which will load the front page of the <i>Pizza Chef</i> app. The setup should also work on Windows, although the tailwindcss process and Rails may needed to be started separately instead of being run together as with "bin/dev."
 ## Testing
  RSpec/Capbyara
- * Before running the test suite, you can ensure that all migrations have been run on the test database by typing:
+ The test suite includes two model test files and one feature test file.
+ * Before running the full test suite, make sure migrations have been run on you test database by typing:
  ```sh
   rake db:test:prepare
  ```
- * To run all the tests, type:
+ * Then, to run all tests, type:
  ```sh
    rspec spec
  ```
