@@ -15,34 +15,34 @@ The following software stack is utilized in the demo version of the application:
 ## Local Installation
 To run <i>Pizza Chef</i> locally in your development environment, Nginx and Redis are not necessary. Follow the steps below to setup the application:
 
-1. Setup Ruby
+1. <b>Setup Ruby</b><br>
 Use RVM, rbenv, or your preferred Ruby version manager to install <i>Ruby 3.14</i>. If you are using RVM, you can do so by running:
 ```sh
 rvm install 3.14
 ```
-2. Clone the GitHub repository
+2. <b>Clone the GitHub repository</b><br>
 Clone the application's source code by running the following command:
  ```sh
    git clone https://github.com/KevinNafziger/pizza_chef1.git
  ```sh
  This will download all the necessary files into a new directory named pizza_chef1.
 
-3. Navigate to the Application Directory
+3. <b>Navigate to the Application Directory</b><br>
  Use the "cd" command to navigate into the app parent directory:
  ```sh
    cd pizza_chef1
  ```
-4. Set Ruby Version
+4. <b>Set Ruby Version</b><br>
 In the pizza_chef1 directory, set the Ruby version for the application to Ruby 3.14. If you're using RVM, run the following command:
 ```sh
 rvm use 3.14
 ```
-5. Install Ruby Dependencies
+5. <b>Install Ruby Dependencies</b><br>
 By default, Pizza Chef uses esbuild for bundling and PostgreSQL as its database. If you wish to modify these defaults, you can change them in the Gemfile. Once you are satisfied with the setup, install the necessary gems by running:
 ```sh
 bundle install
 ```
-6. Install Javascript packages
+6. <b>Install Javascript packages</b><br>
 JavaScript packages are defined in the package.json file located in the root directory of the application. Install these packages by running:
 ```sh
   yarn install
