@@ -49,7 +49,6 @@ JavaScript packages are defined in the package.json file located in the root dir
 ```
 7. <b>Setup database configuration</b><br>
 Configure the config/database.yml file to fit your local development setup for test, development, and production environments. Although the demo uses PostgreSQL, you can also use sqlite3 or MySQL. However, this would require replacing the "pg" gem with "sqlite3" or "MySQL2", respectively.<br>
-
 If you're using PostgreSQL, create the necessary databases and a user with appropriate permissions using the psql command-line utility. Remember to add the database.yml file to your .gitignore to ensure sensitive database credentials are not accidentally committed.
 
 8. <b>Run Database Migrations</b><br>
