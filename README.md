@@ -1,51 +1,83 @@
 # README
 
 ## Configuration for Demo
-* Ruby 3.14, Rails 7.05, PostgreSQL, Redis, Nginx, Puma, Ubuntu, Yarn
+The following software stack is utilized in the demo version of the application:
 
-## Installing locally
-Redis and Nginx should not be needed to run the app locally. To skip installing Redis in development, include this line in your <i>config/development.rb</i> file:
+* Ruby 3.14
+* Rails 7.05
+* PostgreSQL
+* Redis
+* Nginx
+* Puma,
+* Ubuntu
+* Yarn
+
+## Local Installation
+To run <i>Pizza Chef</i> locally in your development environment, Nginx and Redis are not necessary. Follow the steps below to setup the application:
+
+1. Setup Ruby
+Use RVM, rbenv, or your preferred Ruby version manager to install <i>Ruby 3.14</i>. If you are using RVM, you can do so by running:
 ```sh
-config.cache_store = :null_store
+rvm install 3.14
 ```
-Before cloning the app, make sure to have <b>Ruby 3.14</b> set as your default Ruby version for the directory where you copy the code. The Demo app uses PostgreSQL, but MySQL and sqlite3 should work too. Thanks, and enjoy designing pizzas with <i>Pizza Chef</i>!
-
-To start running <i>Pizza Chef</i> on your local machine:
-
-* Clone the repo:
+2. Clone the GitHub repository
+Clone the application's source code by running the following command:
  ```sh
    git clone https://github.com/KevinNafziger/pizza_chef1.git
- ```
-* Move into the parent directory:
+ ```sh
+ This will download all the necessary files into a new directory named pizza_chef1.
+
+3. Navigate to the Application Directory
+ Use the "cd" command to navigate into the app parent directory:
  ```sh
    cd pizza_chef1
  ```
-* Install gems
+4. Set Ruby Version
+In the pizza_chef1 directory, set the Ruby version for the application to Ruby 3.14. If you're using RVM, run the following command:
 ```sh
-   bundle install
+rvm use 3.14
 ```
-* Install javascript
+5. Install Ruby Dependencies
+By default, Pizza Chef uses esbuild for bundling and PostgreSQL as its database. If you wish to modify these defaults, you can change them in the Gemfile. Once you are satisfied with the setup, install the necessary gems by running:
+```sh
+bundle install
+```
+6. Install Javascript packages
+JavaScript packages are defined in the package.json file located in the root directory of the application. Install these packages by running:
 ```sh
   yarn install
 ```
-* Setup your database.yml file in config/database.yml for test, development and production. The demo uses PostgreSQL as the database and the 'pg' gem is included in the Gemfile. However, the configuration can be adapted to the user's preferred relational database.
+7. Setup database configuration
+Configure the config/database.yml file to fit your local development setup for test, development, and production environments. Although the demo uses PostgreSQL, you can also use sqlite3 or MySQL. However, this would require replacing the "pg" gem with "sqlite3" or "MySQL2", respectively.
 
-* Once databases have been created, you can run migrations on your devevlopment database by typing:
+If you're using PostgreSQL, create the necessary databases and a user with appropriate permissions using the psql command-line utility. Remember to add the database.yml file to your .gitignore to ensure sensitive database credentials are not accidentally committed.
+
+8. Run Database Migrations
+Execute the following command to apply necessary database migrations:
 ```sh
   rails db:migrate
 ```
-* Mac and Linux users can run "bin/dev" from the command line and see their development server running at localhost:8080 which will load the front page of the <i>Pizza Chef</i> app. The setup should also work on Windows, although the tailwindcss process and Rails may needed to be started separately instead of being run together as with "bin/dev."
+9. Start the Development Server
+If you are using Mac or Linux, you can start the development server (default is at localhost:8080) by running the command below. If you wish to use a different port, modify the first line in the Procfile.dev file.
+ ```sh
+  bin/dev
+```
+Please note, if you are using Windows, each process defined in Procfile.dev will need to be run in a separate terminal window.
+
+
 ## Testing
- RSpec/Capbyara
- The test suite includes two model test files and one feature test file.
- * Before running the full test suite, make sure migrations have been run on you test database by typing:
+The application's test suite uses RSpec and Capybara, along with the factory_bot_rails, database_cleaner, and Shoulda Matchers gems.
+
+To run the test suite:
+
+1. Prepare the test database by running:
  ```sh
   rake db:test:prepare
  ```
- * Then, to run all tests, type:
+ 2. Execute all tests by running:
  ```sh
    rspec spec
  ```
 
 ## Demo
- * https://pizzachefapp.com <br>
+To experience the full functionality of Pizza Chef, visit the live demo at https://pizzachefapp.com <br>
