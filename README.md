@@ -63,17 +63,16 @@ If you are using Mac or Linux, you can start the development server (default is 
 ```
 Please note, if you are using Windows, each process defined in Procfile.dev will need to be run in a separate terminal window.
 
-
 ## Testing
 The application's test suite uses RSpec and Capybara, along with the factory_bot_rails, database_cleaner, and Shoulda Matchers gems.
 
 To run the test suite:
 
-1. <b>Prepare the test database by running:</b>
+1. Prepare the test database by running:
  ```sh
   rake db:test:prepare
  ```
- 2. <b>Execute all tests by running:</b>
+ 2. Execute all tests by running:
  ```sh
    rspec spec
  ```
