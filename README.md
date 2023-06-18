@@ -63,7 +63,7 @@ If you are using Mac or Linux, you can start the development server (default is 
  ```sh
     bin/dev
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please note, if you are using Windows, each  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;process defined in Procfile.dev will need  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to be run in a separate terminal window.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please note, if you are using Windows, each  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;process defined in Procfile.dev will need to be run &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in a separate terminal window.
 ## Testing
 The application's test suite uses RSpec and Capybara, along with the factory_bot_rails, database_cleaner, and Shoulda Matchers gems.
 
