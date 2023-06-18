@@ -8,7 +8,7 @@ The following software stack is utilized in the demo version of the application:
 * PostgreSQL
 * Redis
 * Nginx
-* Puma,
+* Puma
 * Ubuntu
 * Yarn
 
@@ -47,17 +47,17 @@ JavaScript packages are defined in the package.json file located in the root dir
 ```sh
   yarn install
 ```
-7. Setup database configuration
+7. <b>Setup database configuration</b><br>
 Configure the config/database.yml file to fit your local development setup for test, development, and production environments. Although the demo uses PostgreSQL, you can also use sqlite3 or MySQL. However, this would require replacing the "pg" gem with "sqlite3" or "MySQL2", respectively.
 
 If you're using PostgreSQL, create the necessary databases and a user with appropriate permissions using the psql command-line utility. Remember to add the database.yml file to your .gitignore to ensure sensitive database credentials are not accidentally committed.
 
-8. Run Database Migrations
+8. <b>Run Database Migrations</b><br>
 Execute the following command to apply necessary database migrations:
 ```sh
   rails db:migrate
 ```
-9. Start the Development Server
+9. <b>Start the Development Server</b><br>
 If you are using Mac or Linux, you can start the development server (default is at localhost:8080) by running the command below. If you wish to use a different port, modify the first line in the Procfile.dev file.
  ```sh
   bin/dev
@@ -70,11 +70,11 @@ The application's test suite uses RSpec and Capybara, along with the factory_bot
 
 To run the test suite:
 
-1. Prepare the test database by running:
+1. <b>Prepare the test database by running:</b>
  ```sh
   rake db:test:prepare
  ```
- 2. Execute all tests by running:
+ 2. <b>Execute all tests by running:</b>
  ```sh
    rspec spec
  ```
