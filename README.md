@@ -25,7 +25,7 @@ Clone the application's source code by running the following command:
  ```sh
      git clone https://github.com/KevinNafziger/pizza_chef1.git
  ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will download all the necessary files into a new &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;directory named pizza_chef1.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will download all the necessary files into a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new directory named pizza_chef1.
 
 3. <b>Navigate to the Application Directory</b><br>
  Use the "cd" command to navigate into the app parent directory:
