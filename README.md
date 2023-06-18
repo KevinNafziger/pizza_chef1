@@ -42,15 +42,15 @@ By default, Pizza Chef uses esbuild for bundling and PostgreSQL as its database.
 ```sh
 bundle install
 ```
-6. <b>Install Javascript packages</b><br>
+6. <b>Install JavaScript packages</b><br>
 JavaScript packages are defined in the package.json file located in the root directory of the application. Install these packages by running:
 ```sh
   yarn install
 ```
 7. <b>Setup database configuration</b><br>
-<p>Configure the config/database.yml file to fit your local development setup for test, development, and production environments. Although the demo uses PostgreSQL, you can also use sqlite3 or MySQL. However, this would require replacing the "pg" gem with "sqlite3" or "MySQL2", respectively.</p>
+Configure the config/database.yml file to fit your local development setup for test, development, and production environments. Although the demo uses PostgreSQL, you can also use sqlite3 or MySQL. However, this would require replacing the "pg" gem with "sqlite3" or "MySQL2", respectively.<br>
 
-<p>If you're using PostgreSQL, create the necessary databases and a user with appropriate permissions using the psql command-line utility. Remember to add the database.yml file to your .gitignore to ensure sensitive database credentials are not accidentally committed.</p>
+If you're using PostgreSQL, create the necessary databases and a user with appropriate permissions using the psql command-line utility. Remember to add the database.yml file to your .gitignore to ensure sensitive database credentials are not accidentally committed.
 
 8. <b>Run Database Migrations</b><br>
 Execute the following command to apply necessary database migrations:
