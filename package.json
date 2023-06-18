@@ -1,0 +1,59 @@
+{
+  "name": "esbuild-rails",
+  "version": "1.0.7",
+  "description": "Esbuild plugin for Rails applications",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "build:css": "tailwindcss --postcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/excid3/esbuild-rails.git"
+  },
+  "keywords": [
+    "esbuild",
+    "rails",
+    "stimulus",
+    "hotwire",
+    "import",
+    "glob"
+  ],
+  "author": "Chris Oliver <excid3@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/excid3/esbuild-rails/issues"
+  },
+  "homepage": "https://github.com/excid3/esbuild-rails#readme",
+  "np": {
+    "tests": false
+  },
+  "peerDependencies": {
+    "esbuild": "0.16.17"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.0.0",
+    "@hotwired/turbo-rails": "^7.0.1",
+    "@popperjs/core": "^2.10.2",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.9",
+    "bootstrap": "^5.1.1",
+    "esbuild": "0.16.17",
+    "esbuild-rails": "^1.0.3",
+    "fast-glob": "^3.2.12",
+    "postcss": "^8.4.24",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "sass": "^1.63.4",
+    "tailwind": "^4.0.0",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "chokidar": "^3.5.3",
+    "tailwindcss": "^3.3.2"
+  }
+}

@@ -12,18 +12,13 @@
             <%= link_to 'Create Topping', new_topping_path, "data-controller": "turbo" , class: "lg:text-lg md:text-lg hover:text-white hover:bg-yellow-400 lg:rounded-3xl md:rounded-2xl sm:rounded-2xl lg:py-6 md:py-3 lg:px-5 md:px-5  sm:text-md
     bg-yellow-300 text-white font-l" %>
           </div>
-        <nav class="main-nav">
+        <nav>
           <div class="main-nav__box">
-            <div class="nav__icon-close">
-              <i class="ion ion-md-close"></i>
-            </div>
-            <div class="nav__title">Chef Bar</div>
-            <ul class="nav__list list-reset">
+            <ul class="nav__list">
               <li class="nav__item">
-                <%= link_to "Home", home_index_path, class: "brandh1 nav__link active-link" %>
-              </li>
+                <%= link_to "Home", home_index_path, style: "color: #fdb515", class: "nav__link active-link" %>
               <li class="nav__item">
-                 <%= link_to "Pizzas", pizzas_path, class: "brandh1 nav__link active-link" %>
+                 <%= link_to "Pizzas", pizzas_path, style: "color: #fdb515", class: "nav__link active-link" %>
               </li>
             </ul>
           </div>
