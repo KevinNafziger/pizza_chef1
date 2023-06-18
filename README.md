@@ -25,7 +25,7 @@ Clone the application's source code by running the following command:
  ```sh
    git clone https://github.com/KevinNafziger/pizza_chef1.git
  ```
-     This will download all the necessary files into a new directory named pizza_chef1.
+  This will download all the necessary files into a new directory named pizza_chef1.
 
 3. <b>Navigate to the Application Directory</b><br>
  Use the "cd" command to navigate into the app parent directory:
@@ -38,7 +38,7 @@ In the pizza_chef1 directory, set the Ruby version for the application to Ruby 3
 rvm use 3.14
 ```
 5. <b>Install Ruby Dependencies</b><br>
-By default, Pizza Chef uses esbuild for bundling and PostgreSQL as its database. If you wish to modify these defaults, you can change them in the Gemfile. Once you are satisfied with the setup, install the necessary gems by running:
+By default, <i>Pizza Chef</i> uses esbuild for bundling and PostgreSQL as its database. If you wish to modify these defaults, you can change them in the Gemfile. Once you are satisfied with the setup, install the necessary gems by running:
 ```sh
 bundle install
 ```
@@ -61,7 +61,7 @@ If you are using Mac or Linux, you can start the development server (default is 
  ```sh
   bin/dev
 ```
-    Please note, if you are using Windows, each process defined in Procfile.dev will need to be run in separate terminal window.
+  Please note, if you are using Windows, each process defined in Procfile.dev will need to be run in separate terminal window.
 
 ## Testing
 The application's test suite uses RSpec and Capybara, along with the factory_bot_rails, database_cleaner, and Shoulda Matchers gems.
@@ -78,4 +78,4 @@ To run the test suite:
  ```
 
 ## Demo
-To experience the full functionality of Pizza Chef, visit the live demo at https://pizzachefapp.com <br>
+To experience the full functionality of <i>Pizza Chef</i>, visit the live demo at https://pizzachefapp.com <br>
