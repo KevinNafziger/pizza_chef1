@@ -25,7 +25,7 @@ Clone the application's source code by running the following command:
  ```sh
    git clone https://github.com/KevinNafziger/pizza_chef1.git
  ```
- This will download all the necessary files into a new directory named pizza_chef1.
+     This will download all the necessary files into a new directory named pizza_chef1.
 
 3. <b>Navigate to the Application Directory</b><br>
  Use the "cd" command to navigate into the app parent directory:
@@ -61,7 +61,7 @@ If you are using Mac or Linux, you can start the development server (default is 
  ```sh
   bin/dev
 ```
-Please note, if you are using Windows, each process defined in Procfile.dev will need to be run in a separate terminal window.
+    Please note, if you are using Windows, each process defined in Procfile.dev will need to be run in separate terminal window.
 
 ## Testing
 The application's test suite uses RSpec and Capybara, along with the factory_bot_rails, database_cleaner, and Shoulda Matchers gems.
